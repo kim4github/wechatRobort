@@ -1,0 +1,12 @@
+﻿## 如何使用
+当前微信版本下，把blcok2.png 换成聊天对象的头像，替换pos1、pos2和pos3，安装My_model.py里面main函数的库，桌面前置微信界面，运行Start.py
+
+本程序借鉴：
+一、# 自动回复微信消息机器人
+见CSDN：https://blog.csdn.net/qq_41897800/article/details/123864707
+
+二、基于pyautogui的自动化
+https://www.bilibili.com/video/BV1T34y1o73U?spm_id_from=333.337.top_right_bar_window_default_collection.content.click
+
+
+
