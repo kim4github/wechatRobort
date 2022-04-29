@@ -13,12 +13,7 @@ import WechatControl
 def sendTextMessage(message):
    #判断关键字 启动
    if "小团团" in message:
-        if ("播报" in message) or ("团购" in message):
-            data = WRtxt.read("播报.txt")
-            response = "今日团购播报：\n" + data
-            pyperclip.copy(response)
-            WechatControl.sendMessageByClipboard()
-        elif ("团购预告" in message) or ("团购计划" in message):
+        if ("团购预告" in message) or ("团购计划" in message):
             data = WRtxt.read("团购预告.txt")
             response = data
             pyperclip.copy(response)
@@ -26,6 +21,11 @@ def sendTextMessage(message):
         elif ("物资" in message) or ("皇粮" in message)or ("发了什么" in message):
             data = WRtxt.read("皇粮.txt")
             response = data
+            pyperclip.copy(response)
+            WechatControl.sendMessageByClipboard()
+        elif ("播报" in message) or ("团购" in message):
+            data = WRtxt.read("播报.txt")
+            response = "今日团购播报：\n" + data
             pyperclip.copy(response)
             WechatControl.sendMessageByClipboard()
         elif "感谢" in message:
@@ -77,7 +77,7 @@ def sendTextMessage(message):
             WechatControl.sendMessageByClipboard()
             WRtxt.write(message,"团购登记.txt")
         elif ("今日疫情" in message):
-            response = "今日疫情情况如下，仅供参考！！"
+            response = "4月28日（0-24时）上海新增本土确诊病例5487例、无症状感染者9545例，其中5062例确诊病例为既往无症状感染者转归\n"
             pyperclip.copy(response)
             WechatControl.sendMessageByClipboard()
         elif("编程语言" in message):
@@ -90,6 +90,14 @@ def sendTextMessage(message):
             WechatControl.sendMessageByClipboard()
         elif ("做抗原" in message):
             response = "@所有人 各位亲爱的邻居们，今天我们是做抗原啊！！！\n请各位及时做好检测并向楼组长汇报，大家都是小队长！！！"
+            pyperclip.copy(response)
+            WechatControl.sendMessageByClipboard()
+        elif ("升级" in message):
+            response = "大家好，经过爸爸的悉心教导，我又长大了，会的更多了。\n 想知道我会了点什么？？ 往下看！！\n"
+            pyperclip.copy(response)
+            WechatControl.sendMessageByClipboard()
+            data = WRtxt.read("更新.txt")
+            response = data
             pyperclip.copy(response)
             WechatControl.sendMessageByClipboard()
         elif ("棒" in message) or ("厉害" in message) or ("强" in message) or ("聪明" in message):
